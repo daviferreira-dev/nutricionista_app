@@ -3,7 +3,6 @@ import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-// Importando as telas
 import HomeScreen from './Home';
 import CadastroPaciente from './CadastroPaciente';
 import ListaPacientes from './ListaPacientes';
