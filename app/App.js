@@ -3,9 +3,10 @@ import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-
-import LoginScreen from './LoginScreen';
-import CadastroScreen from './CadastroScreen';
+// Importando as telas
+import HomeScreen from './Home';
+import CadastroPaciente from './CadastroPaciente';
+import ListaPacientes from './ListaPacientes';
 
 const Stack = createNativeStackNavigator();
 
@@ -13,8 +14,9 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator screenOptions={{ headerShown: false }}>
-        <Stack.Screen name="Login" component={LoginScreen} />
-        <Stack.Screen name="Cadastro" component={CadastroScreen} />
+        <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen name="CadastroPaciente" component={CadastroPaciente} />
+        <Stack.Screen name="ListaPacientes" component={ListaPacientes} />
       </Stack.Navigator>
     </NavigationContainer>
   );
