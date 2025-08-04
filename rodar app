@@ -1,0 +1,5 @@
+dependências:
+    composer install
+    npm install
+rodar: 
+    npx expo start + w
