@@ -43,14 +43,15 @@ class LoginScreen extends Component  {
           />
 
 <View style={styles.linkContainer}>
-  <Text style={styles.linkText}>Não possui conta? </Text>
+  <Text style={styles.linkText}>Crie a sua conta </Text>
   <TouchableOpacity onPress={() => this.props.navigation.navigate('Cadastro')}>
     <Text style={styles.linkButton}>Crie agora</Text>
   </TouchableOpacity>
-  <TouchableOpacity style={styles.botao} onPress={() => this.props.navigation.navigate('IMC')}>
+</View>
+
+<TouchableOpacity style={styles.botao} onPress={() => this.props.navigation.navigate('IMC')}>
   <Text style={styles.texto}>Entrar</Text>
 </TouchableOpacity>
-</View>
         </View>
       </View>
     );
@@ -72,6 +73,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 32,
     borderRadius: 20,
     alignItems: 'center',
+    marginTop: 10,
   },
   texto: {
     color: '#fff',

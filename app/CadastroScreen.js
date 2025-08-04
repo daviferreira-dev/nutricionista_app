@@ -7,8 +7,10 @@ class CadastroScreen extends Component  {
   constructor(props) {
     super(props);
     this.state = {
+      nome: '',
       email: '',
-      senha: '',
+      altura: '',
+      peso: '',
     };
   }
 
@@ -21,15 +23,15 @@ class CadastroScreen extends Component  {
         <View style={[styles.circle2, styles.bottomRight2]} />
 
           
-        <Text style={styles.titulo}>Crie a sua conta</Text>
+        <Text style={styles.titulo}>Cadastre-se</Text>
         <View style={styles.formContainer}>
         <Text style={styles.label}>Nome</Text>
           <TextInput
             style={styles.input}
             placeholder="Digite seu nome"
             placeholderTextColor="#999"
-            value={this.state.email}
-            onChangeText={(text) => this.setState({ email: text })}
+            value={this.state.nome}
+            onChangeText={(text) => this.setState({ nome: text })}
           />
 
           <Text style={styles.label}>E-mail</Text>
@@ -41,21 +43,39 @@ class CadastroScreen extends Component  {
             onChangeText={(text) => this.setState({ email: text })}
           />
 
-          <Text style={styles.label}>Senha</Text>
+          <Text style={styles.label}>Altura em cm</Text>
           <TextInput
             style={styles.input}
-            placeholder="Digite sua senha"
+            placeholder="Digite sua altura"
             placeholderTextColor="#999"
             secureTextEntry
-            value={this.state.senha}
-            onChangeText={(text) => this.setState({ senha: text })}
+            value={this.state.altura}
+            onChangeText={(text) => this.setState({ altura: text })}
+          />
+          
+          <Text style={styles.label}>Peso</Text>
+          <TextInput
+            style={styles.input}
+            placeholder="Digite o seu peso"
+            placeholderTextColor="#999"
+            secureTextEntry
+            value={this.state.peso}
+            onChangeText={(text) => this.setState({ peso: text })}
           />
 
-<View style={styles.linkContainer}>
-  <Text style={styles.linkText}>Já tem uma conta? </Text>
-  <TouchableOpacity style={styles.botao} onPress={() => this.props.navigation.navigate('IMC')}>
-  <Text style={styles.texto}>Entrar</Text>
-</TouchableOpacity>
+
+<TouchableOpacity
+            style={[styles.botao, { marginTop: 20 }]}
+            onPress={() => this.props.navigation.navigate('Login')}
+          >
+            <Text style={styles.texto}>Criar conta</Text>
+          </TouchableOpacity>
+
+          <View style={styles.linkContainer}>
+            <Text style={styles.linkText}>Já tem uma conta? </Text>
+            <TouchableOpacity onPress={() => this.props.navigation.replace('Login')}>
+              <Text style={styles.linkButton}>Entrar</Text>
+            </TouchableOpacity>
 </View>
         </View>
       </View>
