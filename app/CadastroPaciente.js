@@ -93,6 +93,12 @@ export default function CadastroPaciente({ navigation }) {
       <TouchableOpacity style={styles.botao} onPress={handleSubmit}>
         <Text style={styles.textoBotao}>Cadastrar</Text>
       </TouchableOpacity>
+      <TouchableOpacity
+        style={styles.botao}
+        onPress={() => navigation.navigate('Home')}
+      >
+        <Text style={styles.textoBotao}>Home</Text>
+      </TouchableOpacity>
     </ScrollView>
   );
 }
